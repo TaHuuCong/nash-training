@@ -24,6 +24,7 @@ import { ChildthreeComponent } from './student/childthree/childthree.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { LoginComponent} from './modal-form/login/login.component';
 import { ModalLoginComponent } from './modal-form/modal-login/modal-login.component';
+import { ContactFormComponent } from './form/contact-form/contact-form.component';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import { ModalLoginComponent } from './modal-form/modal-login/modal-login.compon
     ChildthreeComponent,
     LoginComponent,
     ModalLoginComponent,
+    ContactFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -57,6 +59,6 @@ import { ModalLoginComponent } from './modal-form/modal-login/modal-login.compon
   providers: [
     HeroService
   ],
-  bootstrap: [AppComponent, SuperHeroListInStarWarComponent, ParentComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

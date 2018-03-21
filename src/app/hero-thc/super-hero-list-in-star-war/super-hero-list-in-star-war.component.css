@@ -1,0 +1,61 @@
+.my-table {
+  width: 100%;
+}
+
+.t-row th, .t-row td {
+  border-bottom: 1px solid red;
+  border-right: 1px solid red;
+  padding: 5px;
+  text-align: center;
+}
+
+.t-row:last-child td {
+  border-bottom: none;
+}
+
+.t-row th:last-child, .t-row td:last-child {
+  border-right: none;
+}
+
+.img-per {
+  width: 60%;
+  height: 20%;
+}
+
+.image {
+  margin: 50px 0;
+  width: 80%;
+  height: 80%;
+}
+
+.my-button {
+  margin: 50px 20px;
+}
+
+.p-title {
+  color: pink;
+  font-size: 20px;
+}
+
+.b2-title {
+  color: yellowgreen;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  font-size: 30px;
+}
+
+.track-by, .tc-event {
+  margin-top: 30px;
+}
+
+.ul-track-by, .ul-event {
+  list-style-type: none;
+}
+
+.ul-track-by li {
+  display: inline-block;
+  background-color: green;
+  color: white;
+  margin-right: 10px;
+  width: 30px;
+}

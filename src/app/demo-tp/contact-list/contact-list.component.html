@@ -1,0 +1,38 @@
+<!-- khi click thì gán printable = !printable -->
+<button (click)="printable = !printable" class="my-toggle btn btn-primary">Toggle message</button>
+
+<!-- nếu printable = true thì hiển thị -->
+<p>printable: {{ printable }}</p>
+<h2 *ngIf="printable">{{ message }}</h2>
+
+<div>
+  <!-- khi click thì thực hiện getContacts(): thêm contact -->
+  <button class="btn btn-success my-toggle" (click)="getContacts()">
+    Get contacts
+  </button>
+</div>
+<div *ngIf="contacts" class="tp-block--flex">
+  <div *ngFor="let contact of contacts; let i = index; let fst = first; trackBy: contactTrackByFn" class="tp-block--1-4" [ngClass]="{'tp-special': fst}">
+    <!-- nếu printable = true thì set font-size = styleH3 -->
+    <h3 class="tp-username" [style.fontSize.em]="printable ? styleH3 : 1.25" [ngStyle]="ngStyleH3">{{ contact.name }} item no. {{ i }}</h3>
+    <div>
+      <thc-switches [checked]="contact.avatar?.round" (changeValue)="switchesValueChange($event, i)">
+      </thc-switches>
+      <!-- cái avatar-url và round này được binding dữ liệu vào từ ContactListComponent -->
+      <thc-contact-image-detail [avatar-url]="contact.avatar?.url" [round]="contact.avatar?.round">
+      </thc-contact-image-detail>
+    </div>
+  </div>
+</div>
+
+
+<!--
+  + ban đầu:
+    . round = false nên checked = false (do nó nhận giá trị của round)
+  + khi thực hiện event change ở switches thì có 2 event được bắn ra: 1 là change của chính view đó và
+  1 là changeValue do SwitchesComponent bắn ra
+    . change thực hiện function emitChangeValue với $event để thay đổi giá trị của checked trong input = true
+    . changeValue thực hiện function switchesValueChange để gán giá trị cho round = event (true),
+    . khi round = true sẽ add thêm class tp-avatar cho <img>
+  + cứ tiếp tục như thế mỗi khi thực hiện change
+-->

@@ -1,0 +1,30 @@
+<div class="block-1">
+  <h2 class='title'>{{ title}} của
+    <span [style.color]=" boo() ? 'green' : 'blue'">{{ me }}</span>
+  </h2>
+  <thc-super-hero-list-in-star-war></thc-super-hero-list-in-star-war>
+</div>
+
+<div class="block-2">
+  <h2 class="b2-title app-title">App Component</h2>
+  <div>
+    <input type="text" [(ngModel)] = "message" (keyup.enter)="onClick()">
+    <button (click)="onClick()">Button...</button>
+  </div>
+  <ul>
+    <li *ngFor="let message of messages">
+      {{ message }}
+    </li>
+  </ul>
+  <p class="p-title app-p-title">App Component tag p</p>
+  <thc-heroes></thc-heroes>
+</div>
+
+<div class="block-3">
+  <h2 class="b2-title app-title">Contact Component</h2>
+  <thc-contact-list></thc-contact-list>
+</div>
+
+<div class="block-4">
+  <thc-parent></thc-parent>
+</div>

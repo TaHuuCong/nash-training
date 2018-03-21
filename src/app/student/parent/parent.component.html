@@ -1,0 +1,32 @@
+<h2 class="b2-title app-title">{{parentTitle}}</h2>
+
+
+<!-- ở đây dùng định danh ctArray,... vì nó là internal -->
+<!-- ctMsg, ctArray, studentAddMsg được truyền dữ liệu vào nhờ @Input -->
+<!-- $event sẽ quản lý đối tượng Student -->
+<thc-childone
+    [ctMsg]="cityMsg"
+    [ctArray]="cityArray"
+    [studentAddMsg]="stdAddMsg"
+    (addStudentEvent)="saveData($event)"
+    (sendMsgEvent)="printMsg($event)">
+</thc-childone>
+<p>Full Name: {{stdFullName}}</p>
+<p>Message: {{msg}}</p>
+<thc-childtwo
+    [studentMsg]="stdMsg"
+    [stdLeader]="stdLeaderObj"
+    (addNumberEvent)="printSum($event)">
+</thc-childtwo>
+<p>Sum: {{sum}}</p>
+<thc-childthree
+    (myFullName)="getNameFromChild($event)"
+    (myAge)="getAgeFromChild($event)"
+    (myCheck)="getCheckValue($event)"
+>
+</thc-childthree>
+
+<h4>Detail info</h4>
+<p>FullName: {{nameParent}} </p>
+<p>Age: {{ageParent}}</p>
+<p>Married?: {{checkParent}} </p>

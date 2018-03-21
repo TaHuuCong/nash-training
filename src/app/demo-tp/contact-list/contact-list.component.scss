@@ -1,0 +1,55 @@
+:host {
+  display: block;
+  // background: #d1d1d1;
+  padding: 30px;
+}
+
+.tp-avatar {
+  border-radius: 50%;
+}
+
+.tp-username {
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px;
+  &.active {
+    background-color: #23262d;
+    color: #fff;
+  }
+}
+
+.tp-block {
+  &--1-4 {
+    width: 20%;
+    margin-right: 20px;
+  }
+  &--flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.tp-special {
+  margin-left: 10px;
+}
+
+.my-toggle {
+  margin: 20px 0;
+}
+
+.thc-block {
+  margin-right: 20px;
+}

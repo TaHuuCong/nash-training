@@ -1,0 +1,14 @@
+<h2 class="b2-title">Hero Component - Emulated</h2>
+<p class="p-title">Hero Component tag p</p>
+<ul class="heroes">
+  <!-- nếu hero === selectedHero thì add thêm class selected -->
+  <li *ngFor="let hero of heroes; let i = index; let f = first; let o = odd" [class.selected]="hero === selectedHero" (click)="selectHero(hero)">
+    <!-- nếu chỉ số chia hết cho 2 thì add thêm class 'even' -->
+    <!-- nếu là vòng lặp đầu tiên thì add thêm class 'first' -->
+    <!-- nếu là vòng lặp lẻ thì add thêm style color: yellow -->
+    <span class="no" [class.even]="i%2==0" [ngClass]="{'first': f}" [style.color]="o?'yellow':'white'">{{hero.id}}</span>{{i}} - {{hero.name}}
+  </li>
+</ul>
+
+<hr class="thc-hr">
+<thc-hero-detail [hero]="selectedHero"></thc-hero-detail>

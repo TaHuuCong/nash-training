@@ -1,0 +1,70 @@
+<table [ngStyle]="styleBorder" cellspacing='0' class="my-table table-striped table-hover">
+  <tr class="t-row">
+    <th>STT</th>
+    <th>Họ tên</th>
+    <th>Cân nặng (kg)</th>
+    <th>Chiều cao (cm)</th>
+    <th>Hình ảnh</th>
+  </tr>
+  <!-- do superhero là 1 mảng các phần tử nên muốn lấy ra từng phần tử thì phải lặp -->
+  <tr *ngFor="let person of superhero; index as i" class="t-row">
+    <td>{{i+1}}</td>
+    <td>{{person.name}}</td>
+    <td>{{person.weight}}</td>
+    <td>{{person.height}}</td>
+    <td>
+      <img *ngIf="person.image?.url" [src]="person.image?.url" alt="" class="img-per">
+    </td>
+  </tr>
+</table>
+
+<img [src]="image.url" alt="" class="image">
+<br>
+
+<h3 *ngIf="printable">{{message}}</h3>
+
+<button (click)=doClick() class="btn btn-primary my-button">Click me</button>
+<button (click)=hideMess() class="btn btn-success my-button">Hide message</button>
+
+<div>
+  <button (click)=changeTab(1)>Tab 1</button>
+  <button (click)=changeTab(2)>Tab 2</button>
+  <button (click)=changeTab(3)>Tab 3</button>
+</div>
+<div [ngSwitch]="index">
+  <div *ngSwitchCase="1">
+    <div>Công</div>
+  </div>
+  <div *ngSwitchCase="2">
+    <div>đẹp trai</div>
+  </div>
+  <div *ngSwitchCase="3">
+    <div>quá</div>
+  </div>
+  <div *ngSwitchDefault>
+    <div>Ôi</div>
+  </div>
+</div>
+
+<h4 class="track-by">trackBy</h4>
+<ul class="ul-track-by">
+  <li *ngFor="let item of collection; trackBy: trackByFn">{{item.id}}</li>
+</ul>
+<button (click)="getItems()">Refresh items</button>
+
+<div class="tc-event">
+  <!-- khi nhập vào -->
+  <!-- <input (input)="onInput($event)" type="text"> -->
+
+  <!-- khi nhập vào và enter -->
+  <input (change)="onInput($event)" type="text">
+
+  <!-- khi click vào -->
+  <button (click)="onClick()">Button Push</button>
+</div>
+<ul class="ul-event">
+  <li *ngFor="let text of textes">{{text}}</li>
+</ul>
+
+<h2 class="b2-title">Super-Hero Component - None</h2>
+<p class="p-title">Super-Hero Component tag p</p>

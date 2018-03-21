@@ -1,0 +1,84 @@
+
+.tc-hero {
+  margin: 30px 0;
+}
+
+/* .b2-title {
+  color: blue;
+  margin-top: 50px;
+  margin-bottom: 30px;
+} */
+
+/* .p-title {
+  color: yellow;
+  font-size: 60px;
+} */
+
+.heroes {
+  list-style-type: none;
+  padding: 0;
+  width: 50%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.heroes li {
+  background-color: #eee;
+  box-sizing: content-box;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  position: relative;
+  left: 0;
+}
+
+.heroes li:hover {
+  background-color: #efef9a;
+  color: red;
+  left: 15px;
+}
+
+/* do thêm class thì các style ban đầu ko ảnh hưởng nên muốn style mới thì phải !important */
+.selected {
+  background-color:pink !important;
+  color: blue;
+  left: 15px !important;
+}
+
+.selected:hover {
+  color: blue !important;
+}
+
+.heroes .no {
+  display: inline-block;
+  background-color: green;
+  color: #fff;
+  position: relative;
+  left: 0;
+  width: 15%;
+  top: 0;
+  border-radius: 4px 0 0 4px;
+  padding: 7px;
+  font-weight: 700;
+  font-size: 75%;
+  margin-right: 15px;
+  text-align: center;
+  line-height: 2;
+}
+
+.show-detail {
+  margin: 30px 0;
+}
+
+.thc-hr {
+  background-color: red;
+  height: 1px;
+}
+
+.even {
+  background-color: red !important;
+}
+
+.first {
+  background-color: pink !important;
+}

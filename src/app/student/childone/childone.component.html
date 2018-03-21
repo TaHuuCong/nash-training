@@ -1,0 +1,31 @@
+<h3>{{childTitle}}</h3>
+<b> {{ctMsg}}</b>
+
+<!-- ở đây dùng myctArray vì nó là internal -->
+<ul>
+  <li *ngFor="let cname of myctArray">
+    {{cname}}
+  </li>
+</ul>
+
+<b>{{addMsg}}</b>
+<br/>
+<div>
+  First Name:
+  <!-- khi nhập dữ liệu vào ô input thì thực hiện gán giá trị nhập vào cho student.fname và student.lname -->
+  <input (input)="student.fname=$event.target.value" />
+  <br/> Last Name:
+  <input (input)="student.lname=$event.target.value" />
+  <br/>
+  <button (click)="addStudent()">Add Student</button>
+</div>
+
+<br/>
+<b>{{message}}</b>
+<br/>
+<div>
+  Message :
+  <input (input)="msg=$event.target.value" />
+  <br/>
+  <button (click)="sendMsg()">Send</button>
+</div>

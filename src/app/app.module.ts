@@ -1,7 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {
+  MatFormFieldModule,
+  MatInputModule,
+  MatButtonModule,
+  MatCheckboxModule
+} from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { SuperHeroListInStarWarComponent } from './hero-thc/super-hero-list-in-star-war/super-hero-list-in-star-war.component';
@@ -15,6 +21,9 @@ import { ParentComponent } from './student/parent/parent.component';
 import { ChildoneComponent } from './student/childone/childone.component';
 import { ChildtwoComponent } from './student/childtwo/childtwo.component';
 import { ChildthreeComponent } from './student/childthree/childthree.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { LoginComponent} from './modal-form/login/login.component';
+import { ModalLoginComponent } from './modal-form/modal-login/modal-login.component';
 
 
 @NgModule({
@@ -30,12 +39,21 @@ import { ChildthreeComponent } from './student/childthree/childthree.component';
     ChildoneComponent,
     ChildtwoComponent,
     ChildthreeComponent,
+    LoginComponent,
+    ModalLoginComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatDialogModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatCheckboxModule
   ],
+  entryComponents: [ModalLoginComponent, LoginComponent],
   providers: [
     HeroService
   ],

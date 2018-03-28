@@ -11,6 +11,7 @@ import { HeroService } from '../hero.service';
   encapsulation: ViewEncapsulation.Emulated,
 })
 export class HeroesComponent implements OnInit {
+
   // khai báo thuộc tính hero có kiểu Hero
   hero1: Hero = {
     id: 1,

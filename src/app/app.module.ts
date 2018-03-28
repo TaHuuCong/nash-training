@@ -8,6 +8,8 @@ import {
   MatButtonModule,
   MatCheckboxModule
 } from '@angular/material';
+import { MatDialogModule } from '@angular/material/dialog';
+import { AppRoutingModule } from './/app-routing.module';
 
 import { AppComponent } from './app.component';
 import { SuperHeroListInStarWarComponent } from './hero-thc/super-hero-list-in-star-war/super-hero-list-in-star-war.component';
@@ -21,11 +23,11 @@ import { ParentComponent } from './student/parent/parent.component';
 import { ChildoneComponent } from './student/childone/childone.component';
 import { ChildtwoComponent } from './student/childtwo/childtwo.component';
 import { ChildthreeComponent } from './student/childthree/childthree.component';
-import { MatDialogModule } from '@angular/material/dialog';
-import { LoginComponent} from './modal-form/login/login.component';
+import { LoginComponent } from './modal-form/login/login.component';
 import { ModalLoginComponent } from './modal-form/modal-login/modal-login.component';
 import { ContactFormComponent } from './form/contact-form/contact-form.component';
-
+import { ReactiveFormComponent } from './form/reactive-form/reactive-form.component';
+import { PageNotFoundComponent } from './hero-thc/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +45,8 @@ import { ContactFormComponent } from './form/contact-form/contact-form.component
     LoginComponent,
     ModalLoginComponent,
     ContactFormComponent,
+    ReactiveFormComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,7 +57,8 @@ import { ContactFormComponent } from './form/contact-form/contact-form.component
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    AppRoutingModule,
   ],
   entryComponents: [ModalLoginComponent, LoginComponent],
   providers: [

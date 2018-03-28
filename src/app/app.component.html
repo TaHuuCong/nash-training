@@ -3,7 +3,7 @@
     <span [style.color]=" boo() ? 'green' : 'blue'">{{ me }}</span>
   </h2>
   <thc-super-hero-list-in-star-war></thc-super-hero-list-in-star-war>
-</div>
+</div> -->
 
 <div class="block-2">
   <h2 class="b2-title app-title">App Component</h2>
@@ -17,9 +17,14 @@
     </li>
   </ul>
   <p class="p-title app-p-title">App Component tag p</p>
-  <thc-heroes></thc-heroes>
+  <nav>
+    <a routerLink="/heroes" class="btn btn-primary">Heroes</a>
+    <a routerLink="/super-hero" class="btn btn-danger">Super Hero</a>
+    <a routerLink="/test-hero" class="btn btn-success">Test Hero</a>
+  </nav>
+  <router-outlet></router-outlet>
 </div>
-
+<!--
 <div class="block-3">
   <h2 class="b2-title app-title">Contact Component</h2>
   <thc-contact-list></thc-contact-list>
@@ -34,6 +39,10 @@
   <thc-login></thc-login>
 </div> -->
 
-<div class="block-6">
+<!-- <div class="block-6">
   <thc-contact-form></thc-contact-form>
 </div>
+
+<div class="block-7">
+  <thc-reactive-form></thc-reactive-form>
+</div> -->

@@ -53,15 +53,22 @@
 <button (click)="getItems()">Refresh items</button>
 
 <div class="tc-event">
-  <!-- khi nhập vào -->
-  <!-- <input (input)="onInput($event)" type="text"> -->
-
   <!-- khi nhập vào và enter -->
   <input (change)="onInput($event)" type="text">
 
   <!-- khi click vào -->
   <button (click)="onClick()">Button Push</button>
 </div>
+
+<div class="template-variable">
+  <h4>Template Variable</h4>
+  <input type="text" class="form-control" #txtName>
+  <button class="btn btn-primary" (click)="onGetData(txtName)">Lấy dữ liệu</button>
+
+  <input type="text" class="form-control" ref-yourName>
+  <button class="btn btn-primary" (click)="onGetData2()">Lấy dữ liệu 2</button>
+</div>
+
 <ul class="ul-event">
   <li *ngFor="let text of textes">{{text}}</li>
 </ul>

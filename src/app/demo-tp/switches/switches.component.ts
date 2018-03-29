@@ -18,6 +18,10 @@ export class SwitchesComponent implements OnInit {
   ngOnInit() {
   }
 
+  toggle() {
+    this.checked = !this.checked;
+  }
+
   // EventEmitter.emit() cho phép kích hoạt 1 sự kiện
   // $event sẽ giúp lấy được giá trị của checked (là true hay false) (checked là thuộc tính của input)
   emitChangeValue(event) {

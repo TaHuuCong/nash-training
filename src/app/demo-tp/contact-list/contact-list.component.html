@@ -10,13 +10,15 @@
   <button class="btn btn-success my-toggle" (click)="getContacts()">
     Get contacts
   </button>
+
+  <button class="btn btn-primary" (click)="changeStt()">Change Status Toggle</button>
 </div>
 <div *ngIf="contacts" class="tp-block--flex">
   <div *ngFor="let contact of contacts; let i = index; let fst = first; trackBy: contactTrackByFn" class="tp-block--1-4" [ngClass]="{'tp-special': fst}">
     <!-- nếu printable = true thì set font-size = styleH3 -->
     <h3 class="tp-username" [style.fontSize.em]="printable ? styleH3 : 1.25" [ngStyle]="ngStyleH3">{{ contact.name }} item no. {{ i }}</h3>
     <div>
-      <thc-switches [checked]="contact.avatar?.round" (changeValue)="switchesValueChange($event, i)">
+      <thc-switches [checked]="contact.avatar?.round" (changeValue)="switchesValueChange($event, i)" #switchesExternal>
       </thc-switches>
       <!-- cái avatar-url và round này được binding dữ liệu vào từ ContactListComponent -->
       <thc-contact-image-detail [avatar-url]="contact.avatar?.url" [round]="contact.avatar?.round">

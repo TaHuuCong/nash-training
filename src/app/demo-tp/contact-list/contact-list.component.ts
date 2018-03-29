@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { SwitchesComponent } from '../switches/switches.component';
 
 @Component({
   selector: 'thc-contact-list',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class ContactListComponent {
+
   // trong tslint thì những thằng static phải khai báo đầu tiên (ko đc khai báo sau những thằng ko phải static)
   static clickCounter = 0;  // dùng static nên phải truy cập thông qua class: ContactListComponent.clickCounter
   message = 'Hello, This is Contact-List Component!';
@@ -82,6 +84,7 @@ export class ContactListComponent {
     }
   ];
 
+  @ViewChild('switchesExternal') switchesInternal: SwitchesComponent;
 
   // JSON.stringify() chuyển đổi 1 đối tượng/mảng trong JS thành 1 chuỗi vì khi dữ liệu gửi đến 1 server web thì dữ liệu đó phải là 1 chuỗi
   // JSON.parse() chuyển đổi văn bản thành một đối tượng JS vì dữ liệu lấy từ server phải chuyển thành JS thì nó mới hiểu được
@@ -114,5 +117,7 @@ export class ContactListComponent {
     this.contacts[index].avatar.round = event;
   }
 
-
+  changeStt() {
+    this.switchesInternal.toggle();
+  }
 }

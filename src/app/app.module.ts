@@ -28,6 +28,7 @@ import { ModalLoginComponent } from './modal-form/modal-login/modal-login.compon
 import { ContactFormComponent } from './form/contact-form/contact-form.component';
 import { ReactiveFormComponent } from './form/reactive-form/reactive-form.component';
 import { PageNotFoundComponent } from './hero-thc/page-not-found/page-not-found.component';
+import { LifecycleHookComponent } from './lifecycle-hook/lifecycle-hook.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { PageNotFoundComponent } from './hero-thc/page-not-found/page-not-found.
     ContactFormComponent,
     ReactiveFormComponent,
     PageNotFoundComponent,
+    LifecycleHookComponent,
   ],
   imports: [
     BrowserModule,

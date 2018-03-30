@@ -13,10 +13,10 @@ const routes: Routes = [
   { path: '', redirectTo: '/heroes', pathMatch: 'full' },
   { path: 'heroes', component: HeroesComponent },
   { path: 'super-hero', component: SuperHeroListInStarWarComponent },
-  {
-    path: 'test-hero',
-    loadChildren: 'app/hero-thc/test-hero/test-hero.module#TestHeroModule'
-  },
+  // {
+  //   path: 'test-hero',
+  //   loadChildren: 'app/hero-thc/test-hero/test-hero.module#TestHeroModule'
+  // },
   { path: 'detail/:id', component: HeroDetailComponent },
   { path: '**', component: PageNotFoundComponent },
 ];

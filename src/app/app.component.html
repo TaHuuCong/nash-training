@@ -5,7 +5,7 @@
   <thc-super-hero-list-in-star-war></thc-super-hero-list-in-star-war>
 </div> -->
 
-<!-- <div class="block-2">
+<div class="block-2">
   <h2 class="b2-title app-title">App Component</h2>
   <div>
     <input type="text" [(ngModel)] = "message" (keyup.enter)="onClick()">
@@ -23,7 +23,7 @@
     <a routerLink="/test-hero" class="btn btn-success">Test Hero</a>
   </nav>
   <router-outlet></router-outlet>
-</div> -->
+</div>
 
 <!-- <div class="block-3">
   <h2 class="b2-title app-title">Contact Component</h2>
@@ -47,7 +47,7 @@
   <thc-reactive-form></thc-reactive-form>
 </div> -->
 
-<div class="block-8">
+<!-- <div class="block-8">
   <h2 class="b2-title app-title">Lifecycle Hook Component</h2>
   <button class="btn btn-success" (click)="clickToggle()">Toggle</button><br>
   Số thứ 1: <input type="number" [(ngModel)]="a"><br>
@@ -57,5 +57,12 @@
     <p style="font-weight: bold" class="p1" #valueEx>{{ngContent}}</p>
   </thc-lifecycle-hook>
   <input type="text" #text><br>
-  <button type="button" class="btn btn-danger" (click)="clickBind(text.value)">Bind</button>
-</div>
+  <button type="button" class="btn btn-danger" (click)="clickBind(text.value)">Bind</button><br>
+  <ul #prods>
+    <li *ngFor="let product of products">
+      {{product.id}} - {{product.name}}
+    </li>
+  </ul>
+  <input type="text" class="form-control" style="width: 60%; margin: 0 auto 30px;" #prod>
+  <button class="btn btn-primary" (click)="addProduct(prod.value)">Add Product</button>
+</div> -->

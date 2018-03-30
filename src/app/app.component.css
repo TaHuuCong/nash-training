@@ -48,6 +48,17 @@
   margin-bottom: 30px;
 }
 
+.block-8 ul {
+  list-style-type: none;
+  background-color: black;
+  width: 300px;
+  margin: 0 auto 30px;
+}
+
+.block-8 ul li {
+  color: #fff;
+}
+
 
 
 

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewChild, ElementRef, AfterViewInit, AfterViewChecked  } from '@angular/core';
 
 @Component({
   selector: 'thc-root',
@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 
-export class AppComponent {
+export class AppComponent implements AfterViewInit, AfterViewChecked  {
   title = 'Danh sách siêu anh hùng';
   me = 'Công';
   messages: string[] = [];
@@ -16,8 +16,24 @@ export class AppComponent {
 
   a: number;
   b: number;
-
   total: number;
+
+  products: any[] = [
+    {
+      id: 1,
+      name: 'Iphone 7'
+    },
+    {
+      id: 2,
+      name: 'Iphone 7 Plus'
+    },
+    {
+      id: 3,
+      name: 'Iphone 8'
+    }
+  ];
+
+  @ViewChild('prods') prod: ElementRef;
 
   boo() {
     return 100;
@@ -44,5 +60,23 @@ export class AppComponent {
     this.ngContent = value;
     console.log(this.ngContent);
   }
+
+  addProduct(value) {
+    this.products.push({
+      id: this.products.length + 1,
+      name: value
+    });
+    console.log(this.products);
+  }
+
+  ngAfterViewInit() {
+    // console.log('ngAfterViewInit');
+  }
+
+  ngAfterViewChecked() {
+    // console.log('ngAfterViewChecked');
+    // console.log(this.prod);
+  }
+
 
 }

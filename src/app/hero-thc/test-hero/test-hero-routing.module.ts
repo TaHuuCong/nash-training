@@ -7,7 +7,7 @@ import { TestHeroChildTwoComponent } from './test-hero-child-two.component';
 
 const testHeroRoutes: Routes = [
   {
-    path: '',
+    path: 'test-hero',
     component: TestHeroComponent,
     children: [
       {

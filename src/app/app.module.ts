@@ -29,6 +29,7 @@ import { ContactFormComponent } from './form/contact-form/contact-form.component
 import { ReactiveFormComponent } from './form/reactive-form/reactive-form.component';
 import { PageNotFoundComponent } from './hero-thc/page-not-found/page-not-found.component';
 import { LifecycleHookComponent } from './lifecycle-hook/lifecycle-hook.component';
+import { TestHeroModule } from './hero-thc/test-hero/test-hero.module';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import { LifecycleHookComponent } from './lifecycle-hook/lifecycle-hook.componen
     MatInputModule,
     MatButtonModule,
     MatCheckboxModule,
-    AppRoutingModule,
+    TestHeroModule,
+    AppRoutingModule, // thằng module cha này phải ở cuối
   ],
   entryComponents: [ModalLoginComponent, LoginComponent],
   providers: [

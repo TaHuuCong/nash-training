@@ -18,7 +18,7 @@ export class TestHeroComponent implements OnInit {
     setTimeout(() => {
       // this.routerService.navigate([url]);
       this.routerService.navigateByUrl(url);
-    }, 2000);
+    }, 1000);
   }
 
 }

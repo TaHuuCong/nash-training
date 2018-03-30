@@ -1,0 +1,31 @@
+<div class="card">
+  <div class="card-header bg-info">
+    Movie List
+  </div>
+  <div class="card-body">
+    <table class="table table-bordered table-hover">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Author</th>
+          <th>Link</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of movies; let i = index">
+          <td>{{i+1}}</td>
+          <td>{{item.name}}</td>
+          <td>{{item.author}}</td>
+          <td>
+            <a href="">{{item.link}}</a>
+          </td>
+          <td>
+            <button type="button" class="btn btn-success" (click)="getIdMovie(i+1)">Edit</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

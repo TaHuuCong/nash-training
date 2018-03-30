@@ -5,7 +5,7 @@
   <thc-super-hero-list-in-star-war></thc-super-hero-list-in-star-war>
 </div> -->
 
-<div class="block-2">
+<!-- <div class="block-2">
   <h2 class="b2-title app-title">App Component</h2>
   <div>
     <input type="text" [(ngModel)] = "message" (keyup.enter)="onClick()">
@@ -23,7 +23,7 @@
     <a routerLink="/test-hero" class="btn btn-success">Test Hero</a>
   </nav>
   <router-outlet></router-outlet>
-</div>
+</div> -->
 
 <!-- <div class="block-3">
   <h2 class="b2-title app-title">Contact Component</h2>
@@ -48,7 +48,7 @@
 </div> -->
 
 <!-- <div class="block-8">
-  <h2 class="b2-title app-title">Lifecycle Hook Component</h2>
+  <h2 class="b2-title app-title">Lifecycle Hook</h2>
   <button class="btn btn-success" (click)="clickToggle()">Toggle</button><br>
   Số thứ 1: <input type="number" [(ngModel)]="a"><br>
   Số thứ 2: <input type="number" [(ngModel)]="b"><br>
@@ -66,3 +66,36 @@
   <input type="text" class="form-control" style="width: 60%; margin: 0 auto 30px;" #prod>
   <button class="btn btn-primary" (click)="addProduct(prod.value)">Add Product</button>
 </div> -->
+
+<!-- <div class="block-9">
+  <h2 class="b2-title app-title">Service</h2>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 first-service">
+        <thc-first-service></thc-first-service>
+      </div>
+      <div class="col-md-6 second-service">
+        <thc-second-service></thc-second-service>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div class="block-10">
+  <h2 class="b2-title app-title">Service Practice</h2>
+  <div class="container">
+    <div class="row" style="margin-bottom: 30px;">
+      <div class="col">
+        <thc-movie-list></thc-movie-list>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <thc-movie-manage></thc-movie-manage>
+      </div>
+      <div class="col-md-6">
+        <thc-movie-edit #id></thc-movie-edit>
+      </div>
+    </div>
+  </div>
+</div>

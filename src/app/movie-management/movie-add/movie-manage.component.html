@@ -1,0 +1,22 @@
+<div class="card">
+  <div class="card-header bg-primary">
+    Add Movie
+  </div>
+  <div class="card-body">
+    <form>
+      <div class="form-group">
+        <label for="">Name</label>
+        <input type="text" class="form-control" #name>
+      </div>
+      <div class="form-group">
+        <label for="">Author</label>
+        <input type="text" class="form-control" #author>
+      </div>
+      <div class="form-group">
+        <label for="">Link</label>
+        <input type="text" class="form-control" #link>
+      </div>
+      <button type="button" class="btn btn-primary" (click)="addMovie(name.value, author.value, link.value)">Add</button>
+    </form>
+  </div>
+</div>

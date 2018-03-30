@@ -59,3 +59,18 @@
   margin-right: 10px;
   width: 30px;
 }
+
+.template-variable {
+  margin-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid black;
+}
+
+.template-variable h4 {
+  padding-top: 30px;
+  border-top: 1px solid black;
+}
+
+.template-variable input {
+  margin: 20px 0;
+}

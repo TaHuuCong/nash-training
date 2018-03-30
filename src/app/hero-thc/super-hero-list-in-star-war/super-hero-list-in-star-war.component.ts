@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, ElementRef, ViewChild } from '@angular/core';
 import { SuperHero } from './superhero';
 
 @Component({
@@ -40,6 +40,8 @@ export class SuperHeroListInStarWarComponent implements OnInit {
   index;
   collection;
   textes = [];
+  // public txtName: string;
+  @ViewChild('yourName') herName: ElementRef;
 
   doClick() {
     this.message = 'Đẹp trai';
@@ -86,6 +88,14 @@ export class SuperHeroListInStarWarComponent implements OnInit {
   onInput(test) {
     console.log(test);
     this.textes.push(test.target.value);  // push() thêm 1 phần tử vào cuối mảng
+  }
+
+  onGetData(txtName): void {
+    console.log(txtName.value);
+  }
+
+  onGetData2(): void {
+    console.log(this.herName.nativeElement.value);
   }
 
 }

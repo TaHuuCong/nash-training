@@ -6,11 +6,12 @@
   text-align: center;
 }
 
-.block-3, .block-6 {
+.block-3, .block-6, .block-7, .block-8, .block-9, .block-10 {
   margin: 20px auto;
   max-width: 1000px;
   text-align: center;
   border-bottom: 2px solid red;
+  padding-bottom: 30px;
 }
 
 .block-1 {
@@ -39,6 +40,27 @@
   border-top: 2px solid red;
   padding-top: 20px;
 }
+
+.block-8 button {
+  margin-bottom: 30px;
+}
+
+.block-8 input {
+  margin-bottom: 30px;
+}
+
+.block-8 ul {
+  list-style-type: none;
+  background-color: black;
+  width: 300px;
+  margin: 0 auto 30px;
+}
+
+.block-8 ul li {
+  color: #fff;
+}
+
+
 
 
 

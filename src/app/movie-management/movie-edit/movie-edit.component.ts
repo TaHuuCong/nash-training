@@ -17,10 +17,11 @@ export class MovieEditComponent implements DoCheck {
 
   ngDoCheck() {
     this.movie = this.movieService.getInfoMovie(this.idMovieIn);
-    console.log(this.movie);
+    // console.log(this.movie);
   }
 
   onSaveMovie() {
+    console.log(this.movie);
     this.movieService.updateMovie(this.movie);
   }
 

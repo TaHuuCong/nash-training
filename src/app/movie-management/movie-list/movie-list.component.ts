@@ -16,17 +16,16 @@ export class MovieListComponent implements OnInit {
 
   ngOnInit() {
     this.movies = this.movieService.getAllMovie();
-    console.log(this.movies);
-  }
-
-  getMovie(id: number) {
-    const movie = this.movieService.getInfoMovie(id);
-    console.log(movie);
+    // console.log(this.movies);
   }
 
   getIdMovie(id: number) {
     this.id = id;
     // console.log(this.id);
+  }
+
+  deleteMovie(index: number) {
+    this.movieService.deleteMovie(index);
   }
 
 }

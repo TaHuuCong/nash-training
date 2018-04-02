@@ -79,7 +79,7 @@ export class AppComponent implements DoCheck, AfterViewInit, AfterViewChecked {
 
   ngDoCheck() {
     this.idMovie = this.movie.id;
-    console.log(this.idMovie);
+    // console.log(this.idMovie);
   }
 
   ngAfterViewInit() {

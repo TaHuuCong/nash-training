@@ -34,22 +34,30 @@ export class MovieService {
 
   // lấy thông tin 1 movie
   getInfoMovie(id: number) {
-    return this.movies.find((movie) => movie.id === id);
+    return this.movies.find((movie) => movie.id === id);  // find() trả về movie đầu tiên có movie.id === id
   }
 
   // thêm 1 movie
   addMovie(movie: Movie) {
     movie.id = this.movies.length + 1;
-    this.movies.push(movie);
+    this.movies.push(movie);  // push(): thêm vào cuối mảng
   }
 
   // sửa thông tin movie
-  updateMovie(updatedMovie: Movie) {
-    this.movies.forEach( (movie: Movie, index: number) => {
-      if (updatedMovie.id === movie.id) {
-        this.movies[index] = updatedMovie;
+  updateMovie(updatedMovie: Movie) {  // updatedMovie là movie sau khi sửa
+    this.movies.forEach(
+      (movie: Movie, index: number) => {  // movie là phần tử hiện tại của mảng được lặp tới, index là chỉ số tương ứng
+        if (updatedMovie.id === movie.id) {
+          this.movies[index] = updatedMovie;
+        }
       }
-    });
+    );
+  }
+
+  // xóa movie
+  deleteMovie(index: number) {
+    this.movies.splice(index, 1);
+    console.log(this.movies);
   }
 
 }
